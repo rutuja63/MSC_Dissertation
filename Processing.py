@@ -21,7 +21,7 @@ from shapely.geometry import Point
 
 def calculate_angle(a):
     
-''' The angle finding frunction for anIESat-2 flight line'''
+    ''' The angle finding frunction for anIESat-2 flight line'''
     first_lat = a.lat_ph.iloc[0]
     first_lon = a.lon_ph.iloc[0]
     last_lat = a.lat_ph.iloc[-1]
@@ -65,7 +65,8 @@ def reproject(inEPSG, outEPSG, a):
 
 
 def create_seg(a, stepsize, angle):
-''' function to create a 100 meter segments of a flight line along the track'''
+    
+    ''' function to create a 100 meter segments of a flight line along the track'''
     longitude = np.array(a.lon_ph)
     latitude = np.array(a.lat_ph)
     print("lon", np.min(longitude))
